@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-
 <head>
     <meta charset="UTF-8" />
+    <base href="Dirección URL" target="_blank">
     <title> Curso HTML5 EOI </title>
     <style>
         .tamLogo {
             width: 20%;
         }
-        
+
+        .letraRoja{
+            color: red;
+            background-color: black;
+            margin-bottom: 2px;
+        }        
     </style>
 </head>
 <body>
@@ -18,21 +23,31 @@
     <nav>
         <a href="#elemento" title="Ir al elemento">Ir a elemento principal</a>
     </nav>
+
     <main id="elemento">
-        <section>
-            <article>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas 
-                voluptates aspernatur quia ipsam ut dicta numquam, distinctio officia 
-                vel? Rerum sapiente quia similique, voluptate aut ipsum reiciendis 
-                exercitationem illum quos!
-            </article>
+        <h1 class="letraRoja">Hola soy Pedro Angel, Feliz navidad</h1>
+        
+        <section id="introduccion1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas 
+            voluptates aspernatur quia ipsam ut dicta numquam, distinctio officia 
+            vel? Rerum sapiente quia similique, voluptate aut ipsum reiciendis 
+            exercitationem illum quos!
         </section>
+        
+        <section id="introduccion2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas 
+            voluptates aspernatur quia ipsam ut dicta numquam, distinctio officia 
+            vel? Rerum sapiente quia similique, voluptate aut ipsum reiciendis 
+            exercitationem illum quos!
+        </section>
+
         <aside>
             <a href="#elemento" title="Ir al elemento">Ir a elemento principal</a>
         </aside>
-    </main>
+    </main>    
     <footer>
-        Curso HTML5 EOI – 2019
+        Curso HTML5 EOI – 2019<a href="mailto:info@nuestraweb.com" title="Enlace a correo electronico">info@nuestraweb.com</a>
+        <a href="https://www.google.es/" title="En una nueva página: enlace a politica de privacidad">Politica de privacidad</a>
     </footer>
 </body>
 </html>
