@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content=""/>
+        <meta name="keywords" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Start Bootstrap </title>
+        <link rel="stylesheet" type="text/css" href=""/>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: #1abc9c;
+                color: white;
+            }
+
+            nav,
+            #contact {
+                background-color: #2c3e50;   
+            }
+
+            nav { 
+                padding: 25px;            
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+            
+            nav,
+            .avatar,
+            p,
+            h1,
+            #contact,
+            #portfolio article,
+            #portfolio article div, 
+            .sites{
+                display : flex;
+                flex-direction: row;
+                flex-wrap : wrap;
+                justify-content: center;
+            }
+            
+            nav {
+                display : flex;
+                flex-direction: row;
+                flex-wrap : wrap;
+                justify-contenT: space-around;
+            }
+
+            .menu a {
+                margin: 0px 12px;
+                vertical-align: -webkit-baseline-middle;
+            }
+
+            img {
+                width: 10%;
+            }
+
+            .main {
+                margin: 100px 0px 25px 0px;
+            }
+
+            .main img {
+                margin-bottom: 30px;
+            }
+
+            .main p {
+                margin-top: 20px;
+            }
+
+            #portfolio {
+                background-color: white;
+            }
+
+            #portfolio h2 {
+                color: #2c3e50;
+                text-align: center;    
+                font-size: 3em;
+            }
+
+            #portfolio article {
+                background-color: #1fa4b6;
+                width: 16%;
+                border-radius: 6px;
+                margin: 0px 16px;
+                padding: 24px;
+            }
+            
+            #portfolio article:first-child {
+                background-color: #ba4c63;
+            }
+            
+            #portfolio article:last-child {
+                background-color: black;
+            }
+
+            #portfolio article div img {
+                width: 50%;
+                padding: 32px;
+            }
+
+            #portfolio article div{
+                background-color: white;
+                border-radius: 50%;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h2>START BOOTSTRAP</h2>
+                <div class="menu">
+                    <a href="#portfolio">PORTFOLIO</a>
+                    <a href="#about">ABOUT</a>
+                    <a href="#contact">CONTACT</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="main">
+                <div class="avatar">
+                    <img src="images/avatar.png">
+                </div>
+                <div>
+                    <h1>START BOOTSTRAP</h1>
+                    <p>Graphic Artist • Web Designer • Ilustrator</p>
+                </div>
+            </section>
+            <section id="portfolio">
+                <h2>PORTFOLIO</h2>
+                <div class="sites">
+                    <article>
+                        <div>
+                            <img src="images/circo.png">
+                        </div>
+                    </article>
+                    <article>
+                        <div>
+                            <img src="images/circo.png">
+                        </div>
+                    </article>
+                    <article>
+                        <div>
+                            <img src="images/circo.png">
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section id="about">
+
+            </section>
+        </main>
+        <footer id="contact">
+        </footer>
+    </body>
+</html>
