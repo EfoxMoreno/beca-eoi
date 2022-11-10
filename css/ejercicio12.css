@@ -1,0 +1,7 @@
+
+p { position: relative; }
+
+p:nth-child(odd) { float: left; }
+
+p:nth-child(even) { float: right; }
+
