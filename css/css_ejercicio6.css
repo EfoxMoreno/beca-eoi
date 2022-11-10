@@ -1,0 +1,19 @@
+/*
+section {
+    font-size: 5em;
+}
+
+p {
+    color: red;
+    font-size: 2em;
+}
+*/
+
+section[name="seccion1"],
+.articulo2,
+section + p,
+*[class*="2"],
+*[class^="art"],
+#sec1 {
+    color: red;
+}
