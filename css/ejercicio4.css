@@ -3,11 +3,14 @@ p:first-child,
 p:last-child,
 p:nth-child(even),
 main section:only-child,
-p:first-of-type,
-:not(p) {
+p:first-of-type{
     color: red;
 }
 
 p:nth-child(odd) {
     color: yellow;
+}
+
+:not(p) {
+    background-color: red;
 }
