@@ -1,0 +1,39 @@
+/* Si el valor es X */
+$type: monster;
+
+p {
+@if $type == ocean {
+color: blue;
+} @else if $type == matador {
+color: red;
+} @else if $type == monster {
+color: green;
+} @else {
+color: black;}}
+
+
+/* Mixin */
+
+@mixin rounded1($valorMargin, $valorPadding, $bgColor)  {
+    padding: #{$valorMargin};
+    margin: #{$valorPadding};
+    background-color: #{$bgColor};
+}
+
+@mixin rounded2($vert, $horz, $radius: 10px)  {
+    border: 10px;
+    border-style: solid;
+    border-#{$vert}-#{$horz}-radius: $radius;
+    -moz-border-#{$vert}-#{$horz}-radius: $radius;
+    -webkit-border-#{$vert}-#{$horz}-radius: $radius;
+}
+
+nav { @include rounded1(4px, 10px, "lightblue"); }
+nav { @include rounded2(top, left); }
+
+
+/* Bucles For */
+
+@for $i from 1 through 3 {
+    .item-#{$i} { width: 2em * $i; }
+}
