@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Ejercicio de practica sobre Bootstrap tanto css como js."/>
+        <meta name="keywords" content="Bootstrap, practica programacion, españa"/>
+        <meta name="author" content="Pedro Angel Moreno Romera"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> BootStrap </title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <style>
+            .row div:nth-child(odd){
+                background-color: lightblue;
+            }
+            .row div:nth-child(even){
+                background-color: orange;
+            }
+            .row div:nth-child(2){
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-4">A</div>
+            <div class="col-6">B</div>
+            <div class="col-1">C</div>
+            <div class="col-1">D</div>
+        </div>
+
+        <div class="row mt-5 pt-3">
+            <div class="col-4 pt-3">A</div>
+            <div class="col-6">B</div>
+            <div class="col-1">C</div>
+            <div class="col-1">D</div>
+        </div>
+        <script src="js/bootstrap.bundle.js"></script>
+    </body>
+</html>
