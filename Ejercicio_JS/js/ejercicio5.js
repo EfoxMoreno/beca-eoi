@@ -5,7 +5,7 @@ let resultado = "";
 /* b) Crear un pequeño programa que recorra el array y cuando encuentre el 1 muestre UNO , 
       el 2 nuestre DOS, el 3 muestre TRES, el 4 muestre CUATRO Utilizar la instrucción Switch */
 for(let x = 0; x < array1.length; x++){
-    switch(x){
+    switch(array1[x]){
     case 1:
         resultado = "UNO";
         break;
@@ -22,13 +22,13 @@ for(let x = 0; x < array1.length; x++){
         resultado = "No existen más valores";
         break;
     }
+    console.log(resultado);
 }
-console.log(resultado);
 
 /* c) Introducir un 3 al final del array y visualizar el array */
 array1.push(3);
 console.log(array1);
 
 /* d) Quitar los 3 últimos elementos del array y visualizar el array */
-console.log(array1.splice(-3));
+array1.splice(-3);
 console.log(array1);
