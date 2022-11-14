@@ -27,6 +27,9 @@ function calculos(valor_1, valor_2, simbolo){
             resultado = valor_1 - valor_2; 
         }
         break;
+    default:
+        console.log("Ese calculo no está implementado");
+        break;
     }    
     return resultado;
 }
