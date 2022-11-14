@@ -7,7 +7,7 @@ console.log(message+"LOG");
 console.time();
 console.timeEnd();
 
-/* Extensible */
+/* Sumar y Restar */
 let numero_1 = 2;
 let numero_2 = 34;
 let resultado = 0;
