@@ -43,6 +43,4 @@ console.info(pc);
 
 /* Array de objeto */
 let listaObjetos = ["Manolo","Mario","Carlos"];
-for(let x = 0; x < listaObjetos.length; x++){
-    console.log(listaObjetos[x]);
-}
+console.log(listaObjetos);
