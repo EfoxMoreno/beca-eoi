@@ -5,7 +5,7 @@ let cadena1 = "CADENA1";
 console.log("Está en la posición: " + cadena1.indexOf("ENA"));
 
 /* El carácter de la última posición de la cadena */
-console.log("Carácter última posición: " + cadena1.length);
+console.log("Carácter última posición: " + cadena1.charAt(cadena1.length-1));
 
 /* El valor de la variable cadena1 convertido a minúsculas */
 console.log("Cadena pasada a minúsculas: " + cadena1.toLocaleLowerCase());
