@@ -36,7 +36,7 @@ let pc = {
     name : 'Windows',
     year: 1995
 };
-console.log(pc['name'] + " / " + pc['year']);
+console.info(pc);
 
 /* Array de objeto */
 let listaObjetos = ["Manolo","Mario","Carlos"];
