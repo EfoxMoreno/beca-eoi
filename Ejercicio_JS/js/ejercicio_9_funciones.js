@@ -22,15 +22,15 @@ function multiplicacion(parametro_uno, parametro_dos) {
 }
 
 function obtenerDatos(){
-    let numero_uno = document.getElementById("numero_uno").innerHTML;
-    let numero_dos = document.getElementById("numero_dos").innerHTML;
+    let identificador_uno = document.getElementById("identificador_uno").innerHTML;
+    let identificador_dos = document.getElementById("identificador_dos").innerHTML;
     let resultado = document.getElementById("resultado");
 
-    let sumar = suma(Number(numero_uno), Number(numero_dos));
-    let multiplicar = multiplicacion(Number(numero_uno), Number(numero_dos));
+    let sumar = suma(Number(identificador_uno), Number(identificador_dos));
+    let multiplicar = multiplicacion(Number(identificador_uno), Number(identificador_dos));
 
-    let suma_id = "Sumar: " + numero_uno + " + " + numero_dos + " = " + sumar;
-    let multiplicar_id = "Multiplicar: " + numero_uno + " * " + numero_dos + " = " + multiplicar;    
+    let suma_id = "Sumar: " + identificador_uno + " + " + identificador_dos + " = " + sumar;
+    let multiplicar_id = "Multiplicar: " + identificador_uno + " * " + identificador_dos + " = " + multiplicar;    
     
     let total = "Total suma de resultados: " + (sumar + multiplicar);
 
