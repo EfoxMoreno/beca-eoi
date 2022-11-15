@@ -11,5 +11,9 @@ function obtenerDatos(){
     let identificador_dos = document.getElementById("identificador_dos").innerHTML;
     let resultado = document.getElementById("resultado");
 
-    resultado.innerHTML = suma(Number(identificador_uno), Number(identificador_dos));
+    let sumar = suma(Number(identificador_uno), Number(identificador_dos));
+    let multiplicar = multiplicacion(Number(identificador_uno), Number(identificador_dos));
+
+    resultado.innerHTML = "Sumar: " + identificador_uno + " + " + identificador_dos + " = " + sumar;
+    resultado.innerHTML += "<br> Multiplicar: " + identificador_uno + " * " + identificador_dos + " = " + multiplicar;
 }
