@@ -17,7 +17,8 @@ function fecha (fechaActual, ampliarMeses){
     if(mes < 10){ mes = "0" + mes; }
     if(dia < 10){ dia = "0" + dia; }
 
+    let mensaje = dia + "/" + mes + "/" + anyo;
     
-    console.log(dia + "/" + mes + "/" + anyo);  // Mostramos en consola el resultado final
-    alert(dia + "/" + mes + "/" + anyo);        // Mostramos en alerta el resultado final
+    console.log(mensaje);  // Mostramos en consola el resultado final
+    alert(mensaje);        // Mostramos en alerta el resultado final
 }
