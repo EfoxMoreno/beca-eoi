@@ -14,9 +14,10 @@ function obtenerDatos(){
     let sumar = suma(Number(identificador_uno), Number(identificador_dos));
     let multiplicar = multiplicacion(Number(identificador_uno), Number(identificador_dos));
 
-    resultado.innerHTML = "Sumar: " + identificador_uno + " + " + identificador_dos + " = " + sumar;
-    resultado.innerHTML += "<br> Multiplicar: " + identificador_uno + " * " + identificador_dos + " = " + multiplicar;    
-    resultado.innerHTML += "<br> Multiplicar: " + identificador_uno + " * " + identificador_dos + " = " + multiplicar;
+    let suma_id = "Sumar: " + identificador_uno + " + " + identificador_dos + " = " + sumar;
+    let multiplicar_id = "Multiplicar: " + identificador_uno + " * " + identificador_dos + " = " + multiplicar;    
+    
+    let total = "Total suma de resultados: " + (sumar + multiplicar);
 
-    resultado.innerHTML = sumar + multiplicar;
+    resultado.innerHTML = suma_id + "<br>" + multiplicar_id + "<br>" + total;
 }
