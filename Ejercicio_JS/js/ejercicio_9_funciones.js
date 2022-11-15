@@ -31,7 +31,6 @@ function obtenerDatos(){
 
     let suma_id = "Sumar: " + numero_uno + " + " + numero_dos + " = " + sumar;
     let multiplicar_id = "Multiplicar: " + numero_uno + " * " + numero_dos + " = " + multiplicar;    
-    
     let total = "Total suma de resultados: " + (sumar + multiplicar);
 
     resultado.innerHTML = suma_id + "<br>" + multiplicar_id + "<br>" + total;
