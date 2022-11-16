@@ -1,5 +1,5 @@
 // a)
-var nombre = prompt("A");
+var nombre = prompt("Introduzca el nombre: ");
 console.log(nombre);
 
 // b)
