@@ -4,7 +4,7 @@
             var el = document.getElementById("caja"),
                 izq = el.offsetLeft;
             
-            if ((pasos > 0 && izq > 399) || (pasos > 0 && izq < 5)) {
+            if ((pasos > 0 && izq > 399) || (pasos < 0 && izq < 5)) {
                 clearTimeout(timer);
                 timer = setInterval(function() {
                     mueveCaja(pasos * -1);
