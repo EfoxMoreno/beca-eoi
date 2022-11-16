@@ -1,7 +1,7 @@
 (function(){
-    var parrafo1 = document.getElementById("parrafo1");    
-    parrafo1.setAttribute("align","right");
-    parrafo1.align = "left";
+    var parrafo1 = document.getElementById("tres");    
+    parrafo1.setAttribute("id","parrafo1");
+    parrafo1.align = "parrafo1";
 
     console.log(parrafo1);
 }());
