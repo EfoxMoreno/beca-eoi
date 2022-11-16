@@ -9,8 +9,10 @@ function fecha (fechaActual, ampliarMeses){
 
     // Total de meses + Meses agregados, si se supera sumar al año y restar al mes
     if(suma > 12){ 
-        anyo = Number(fechaCadena[0]) + 1;
+        anyo += 1;
         mes = (Number(fechaCadena[1]) + ampliarMeses) - 12;
+    } else {
+        mes = (Number(fechaCadena[1]) + ampliarMeses);
     }
 
     // Sí el mes es menor a 10 agregarle un cero delante
