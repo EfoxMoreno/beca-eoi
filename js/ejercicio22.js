@@ -1,4 +1,4 @@
-function preparandoDatos() {
+/*function preparandoDatos() {
     var formulario = document.forms.formData;
     var nombre = formulario.nombre;
 
@@ -20,3 +20,27 @@ function preparandoDatos() {
 window.onload = function() {
     preparandoDatos();
 };
+*/
+
+const form = document.getElementById("formData");
+
+form.addEventListener('submit', function(element){
+    element.preventDefault();
+    
+    const formData = new FormData(form);
+    var nombre = formData.get("nombre");
+    var email = formData.get("mail");
+    var resultado = "";
+
+    var palabraInicial = nombre.startsWith("ANTONIO");
+
+    if(nombre.length < 20 && palabraInicial === true){
+        resultado += "Nombre: " + nombre;
+    }
+
+    if(email != ""){
+        resultado += "Email: " + email;
+    }
+
+    document.getElementById("resultado").innerHTML = resultado;
+});
