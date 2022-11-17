@@ -3,7 +3,7 @@ function boton1() {
     var buttonOne = document.getElementById("boton1");
 
     if(elementP.className == ""){
-        elementP.className = "Parrafo";
+        elementP.className = "parrafo";
         buttonOne.innerText = "Quitar estilo a párrafo";
         buttonOne.className = "aplicado";
     }else{
