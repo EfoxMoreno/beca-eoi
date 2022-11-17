@@ -28,6 +28,6 @@ form.addEventListener('submit', function(element){
     if (verificado[0] === true && verificado[1] === true) {
         document.getElementById("resultado").innerHTML = resultado;
     } else {
-        document.getElementById("resultado").innerHTML = "Los datos del formulario no son correctos";
+        document.getElementById("resultado").innerHTML = "Los datos del formulario no son correctos.";
     }
 });
