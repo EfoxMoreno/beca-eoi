@@ -1,27 +1,3 @@
-/*function preparandoDatos() {
-    var formulario = document.forms.formData;
-    var nombre = formulario.nombre;
-
-    document.getElementById("formData").onsubmit = function() {
-        var nombreValue = nombre.value;
-
-        var palabraContenida = "ANTONIO";
-        var nombreMayusculas = nombreValue.toUpperCase();
-        var contieneInicialPalabra = nombreMayusculas.startsWith(palabraContenida);
-        
-        if(nombreValue.length < 20 && contieneInicialPalabra === true){
-            alert(nombreValue);
-        }
-
-        // Lugar de pruebas
-    };
-}
-
-window.onload = function() {
-    preparandoDatos();
-};
-*/
-
 const form = document.getElementById("formData");
 
 form.addEventListener('submit', function(element){
@@ -32,13 +8,26 @@ form.addEventListener('submit', function(element){
     var select = formData.get("provincia");
 
     var palabraInicial = nombre.startsWith("ANTONIO");
+    var verificado = [false,false,false];
     var resultado = "";
 
-    if(nombre.length < 20 && palabraInicial === true){ resultado += "Nombre: " + nombre; }
+    if(nombre.length < 20 && palabraInicial === true){ 
+        resultado += "Nombre: " + nombre;
+        verificado[0] = true;
+    }
 
-    if(email.length > 0){ resultado += "Email: " + email; }
+    if(email.length > 0){
+        resultado += "<br>";
+        resultado += "Email: " + email; 
+        resultado += "<br>";       
+        verificado[1] = true;
+    }
 
-    resultado += select;
+    resultado += "Provincia: " + select;
 
-    document.getElementById("resultado").innerHTML = resultado;
+    if (verificado[0] === true && verificado[1] === true) {
+        document.getElementById("resultado").innerHTML = resultado;
+    } else {
+        document.getElementById("resultado").innerHTML = "Los datos del formulario no son correctos";
+    }
 });
