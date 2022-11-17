@@ -8,7 +8,11 @@ function preparandoDatos() {
         if(nombreValue.length < 20){
             alert(nombreValue.length);
         }
-        
+
+        // Lugar de pruebas
+        var palabraContenida = "ANTONIO";
+        var nombreMayusculas = nombreValue.toUpperCase();
+        alert(palabraContenida + " / " + nombreMayusculas);
     };
 }
 
