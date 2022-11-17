@@ -3,10 +3,15 @@ function preparandoDatos() {
     var nombre = formulario.nombre;
 
     document.getElementById("formData").onsubmit = function() {
-        alert(nombre);
+        var nombreValue = nombre.value;
+
+        if(nombreValue.length < 20){
+            alert(nombreValue.length);
+        }
+        
     };
 }
 
 window.onload = function() {
     preparandoDatos();
-}
+};
