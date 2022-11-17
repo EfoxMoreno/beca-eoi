@@ -5,14 +5,15 @@ function preparandoDatos() {
     document.getElementById("formData").onsubmit = function() {
         var nombreValue = nombre.value;
 
-        if(nombreValue.length < 20){
-            alert(nombreValue.length);
+        var palabraContenida = "ANTONIO";
+        var nombreMayusculas = nombreValue.toUpperCase();
+        var contieneInicialPalabra = nombreMayusculas.startsWith(palabraContenida);
+        
+        if(nombreValue.length < 20 && contieneInicialPalabra === true){
+            alert(nombreValue);
         }
 
         // Lugar de pruebas
-        var palabraContenida = "ANTONIO";
-        var nombreMayusculas = nombreValue.toUpperCase();
-        alert(palabraContenida + " / " + nombreMayusculas);
     };
 }
 
