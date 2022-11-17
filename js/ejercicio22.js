@@ -25,22 +25,20 @@ window.onload = function() {
 const form = document.getElementById("formData");
 
 form.addEventListener('submit', function(element){
-    element.preventDefault();
-    
+    element.preventDefault();    
     const formData = new FormData(form);
     var nombre = formData.get("nombre");
     var email = formData.get("mail");
-    var resultado = "";
+    var select = formData.get("provincia");
 
     var palabraInicial = nombre.startsWith("ANTONIO");
+    var resultado = "";
 
-    if(nombre.length < 20 && palabraInicial === true){
-        resultado += "Nombre: " + nombre;
-    }
+    if(nombre.length < 20 && palabraInicial === true){ resultado += "Nombre: " + nombre; }
 
-    if(email != ""){
-        resultado += "Email: " + email;
-    }
+    if(email.length > 0){ resultado += "Email: " + email; }
+
+    resultado += select;
 
     document.getElementById("resultado").innerHTML = resultado;
 });
