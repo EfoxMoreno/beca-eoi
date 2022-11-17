@@ -8,7 +8,7 @@ form.addEventListener('submit', function(element){
     var select = formData.get("provincia");
 
     var palabraInicial = nombre.startsWith("ANTONIO");
-    var verificado = [false,false,false];
+    var verificado = [false,false];
     var resultado = "";
 
     if(nombre.length < 20 && palabraInicial === true){ 
