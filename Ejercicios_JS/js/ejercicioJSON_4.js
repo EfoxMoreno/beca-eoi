@@ -20,11 +20,12 @@ fetch(request)
                 </div>
                 <ul class="list-group list-group-flush">
         `;
-        item.direcciones.forEach(direccion => {              
-            if(count > 2) { count = 1; }   
-            filas += `        
-                <li class="list-group-item text-white bg-secondary">Direccion `+count+`: ${direccion.nombre}</li>
-                <li class="list-group-item text-white bg-secondary">Población `+count+`: ${direccion.poblacion}</li>
+        item.direcciones.forEach(direccion => {
+            if(count > 2) { count = 1; }
+            if(count <= 2) { filas += `<p class="text-center bg-primary" style="margin: 0px; padding: 12px; border: 1px solid #1c6ce1;;">INFORMACION `+count+`</p>`;}
+            filas += `
+                <li class="list-group-item text-white bg-secondary"><u>Direccion:</u> <br><p class="text-center" style="margin: 0px 0px 10px 0px;">${direccion.nombre}</p></li>
+                <li class="list-group-item text-white bg-secondary "><u>Población:</u> <br><p class="text-center" style="margin: 0px 0px 10px 0px;">${direccion.poblacion}</p></li>
             `;
             count++;
         });
