@@ -31,4 +31,5 @@ fetch(request)
     });
     tabla += filas+finTabla;
     document.getElementById("resultados").innerHTML = tabla;
+    console.log(tabla);
 });
