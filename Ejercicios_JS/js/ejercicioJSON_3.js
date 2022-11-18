@@ -20,15 +20,15 @@ let filas = ``;
 
 fetch(request)
 .then(response => response.json())
-.then(item => {
-    for(let x = 0; x < item.arrayUsuarios.length; x++){
+.then(data => {
+    data.arrayUsuarios.forEach(item => {    
         filas +=`
         <tr>
-            <td>${item.arrayUsuarios[x].nombre}</td>
-            <td>${item.arrayUsuarios[x].apellidos}</td>
-            <td>${item.arrayUsuarios[x].direccion}</td>
+            <td>${item.nombre}</td>
+            <td>${item.apellidos}</td>
+            <td>${item.direccion}</td>
         </tr>`;
-    }
+    });
     tabla += filas+finTabla;
     document.getElementById("resultados").innerHTML = tabla;
 });
