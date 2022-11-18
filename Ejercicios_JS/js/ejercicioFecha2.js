@@ -1,3 +1,5 @@
+
+/*
 function fecha (fechaActual, ampliarMeses) {
     let fechaCadena = fechaActual.split("-"); //2022 10 01
     let suma = Number(fechaCadena[1]) + Number(ampliarMeses);
