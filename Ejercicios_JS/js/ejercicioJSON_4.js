@@ -14,7 +14,7 @@ fetch(request)
         filas +=`        
         <div class="col-sm-4">
             <div class="card text-white bg-success" style="width: 18rem;">
-                <div class="card-body ">
+                <div class="card-body text-center">
                     <h5 class="card-title">${item.nombre}</h5>
                     <p class="card-text">${item.apellidos}</p>
                 </div>
