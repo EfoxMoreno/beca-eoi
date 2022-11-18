@@ -3,24 +3,23 @@ const headers = {
     'Access-Control-Allow-Origin':'*'
 };
 
-let tabla = `<table id="dataTable">
-<thead>
-    <tr>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Direccion</th>
-    </tr>
-</thead>
-<tbody>`;
-
-let finTabla = `</tbody>
-    </table>`;
-
-let filas = ``;
 
 const urlUsers = ("https://j4jjw.mocklab.io/users");
 axios.get(urlUsers,{headers})
 .then((respuestaUsuarios) => {
+    let tabla = `<table id="dataTable">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Direccion</th>
+        </tr>
+    </thead>
+    <tbody>`;
+
+    let finTabla = `</tbody>
+    </table>`;
+    let filas = ``;
     respuestaUsuarios.data.arrayUsuarios.forEach(item => {
         filas +=`
         <tr>

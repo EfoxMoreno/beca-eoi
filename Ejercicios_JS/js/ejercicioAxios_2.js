@@ -2,14 +2,12 @@ const headers = {
     'Content-Type':'application/json',
     'Access-Control-Allow-Origin':'*'
 };
-
-let tabla = `<div class="row mt-4">`;
-let filas = ``;
-let count = 1;
-
 const urlUsers = ("https://j4jjw.mocklab.io/usersDataList");
 axios.get(urlUsers,{headers})
-.then((respuestaUsuarios) => {
+.then((respuestaUsuarios) => {    
+    let tabla = `<div class="row mt-4">`;
+    let filas = ``;
+    let count = 1;
     respuestaUsuarios.data.arrayUsuarios.forEach(item => {
         filas +=`        
         <div class="col-sm-4">
@@ -33,5 +31,4 @@ axios.get(urlUsers,{headers})
     });
     tabla += filas;
     document.getElementById("resultados").innerHTML = tabla;
-    console.log(tabla);
 });
