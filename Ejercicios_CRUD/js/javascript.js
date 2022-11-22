@@ -80,7 +80,11 @@ function editarObjeto(idItem) {
 
 function eliminarObjeto(idItem){    
     axios.delete(urlUsers+"/"+idItem,dataRequest,{headers})
-    .then((url) => {
+    .then((respuesta) => {
+        console.log(respuesta.data);
         window.location.assign("index.html");
+    })
+    .catch((error)=>{
+        console.log(error);
     });
 }
