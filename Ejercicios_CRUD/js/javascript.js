@@ -79,12 +79,13 @@ function editarObjeto(idItem) {
     });
 }
 
+//Revisarlo porque no borra
 function guardaIdEliminar(idItem, nombreProducto){
     idItemEliminar=idItem;
     document.getElementById("nombreProducto").innerHTML=nombreProducto;
 }
 
-function eliminarObjeto(){    
+function eliminarObjeto(){
     axios.delete(urlUsers+"/"+idItemEliminar,{headers})
     .then((respuesta) => {
         console.log(respuesta.data);
