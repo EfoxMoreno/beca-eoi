@@ -48,9 +48,6 @@ axios.get(urlUsers,{headers})
     document.getElementById("resultados").innerHTML = tabla;
 });
 
-
-// Nuevo Ejercicio 22/11/2022
-
 function editarObjeto(idItem) {
     axios.get(urlUsers+"/"+idItem,{headers})
     .then((respuestaProductos) => {
@@ -79,17 +76,44 @@ function editarObjeto(idItem) {
     });
 }
 
-//Revisarlo porque no borra
 function guardaIdEliminar(idItem, nombreProducto){
     idItemEliminar=idItem;
     document.getElementById("nombreProducto").innerHTML=nombreProducto;
 }
 
 function eliminarObjeto(){
+    console.log(idItemEliminar);
     axios.delete(urlUsers+"/"+idItemEliminar,{headers})
     .then((respuesta) => {
         console.log(respuesta.data);
         window.location.assign("index.html");
+    })
+    .catch((error)=>{
+        console.log(error);
+        document.getElementById("mostrarInformación").innerHTML = error;
+    });
+}
+
+
+// Ejercicio POST
+function postObjeto(){
+    axios.get(urlUsers,{headers})
+    .then((respuestaProductos) => {
+        // Formulario para modificar articulos
+        const form = document.getElementById('formularioPost');
+        form.addEventListener('submit', function(element) {
+            element.preventDefault();
+            const dataRequest = {
+                "id":document.getElementById("post-id").value,
+                "name":document.getElementById("post-name").value,
+                "description":document.getElementById("post-text").value,
+                "code":document.getElementById("post-code").value
+            };
+            axios.post(urlUsers,dataRequest,{headers})
+            .then((url) => {
+                window.location.assign("index.html");
+            });
+        });
     })
     .catch((error)=>{
         console.log(error);

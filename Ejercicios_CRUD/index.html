@@ -31,10 +31,23 @@
             .iconDeleteClick:hover {
                 fill: #dc3545;
             }
+            .nuevoPost {
+                border-radius: 4px;
+                padding: 0px 8px 4px 8px;
+                border: 1px solid #6eb96e;
+                background-color: #93cb93;
+                color: white;
+                position: absolute;
+                top: 50px;
+                left: 18px;
+            }
         </style>
     </head>
     <body>
         <main>
+            <button class="nuevoPost" data-bs-toggle='modal' data-bs-target='#postModal' onclick="postObjeto()">
+                <span>+ Crear nuevo</span>
+            </button>
             <div id="resultados" class="d-flex justify-content-center"></div>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -70,6 +83,44 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modificar datos</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formularioPost">
+                                <div class="mb-3">
+                                    <label for="post-id" class="col-form-label">ID:</label>
+                                    <input type="text" name="id" class="form-control" id="post-id">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="post-name" class="col-form-label">Nombre:</label>
+                                    <input type="text" class="form-control" id="post-name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="post-text" class="col-form-label">Descripcion:</label>
+                                    <textarea class="form-control" id="post-text"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="post-code" class="col-form-label">Código:</label>
+                                    <input type="text" class="form-control" id="post-code">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <input type="submit" class="btn btn-primary" value="Aplicar cambios">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
