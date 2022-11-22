@@ -86,5 +86,6 @@ function eliminarObjeto(idItem){
     })
     .catch((error)=>{
         console.log(error);
+        document.getElementById("mostrarInformación").innerHTML = error;
     });
 }
