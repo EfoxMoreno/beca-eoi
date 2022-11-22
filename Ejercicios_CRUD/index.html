@@ -78,12 +78,13 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            ¿Estás seguro de querer borrar esta información?
+                            ¿Estás seguro de querer borrar esta información?<br/>
+                            <span id="nombreProducto"></span>
                         </div>
                         <div id="mostrarInformación"></div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
+                            <button type="button" class="btn btn-danger" onclick="eliminarObjeto()">Eliminar</button>
                         </div>
                     </div>
                 </div>
