@@ -11,10 +11,25 @@
             * {
                 margin: 0px;
                 padding: 0px;
-            }
-            
+            }            
             body {
                 background-color: #e7e7e7;
+            }
+            button {
+                background-color: transparent;
+                border: 0px;
+            }
+            .iconClick {
+                width: 16px;
+                height: 16px;
+                color: white;
+                margin: 0px 4px;
+            }
+            .iconEditClick:hover {
+                fill: #35dc54;
+            }
+            .iconDeleteClick:hover {
+                fill: #dc3545;
             }
         </style>
     </head>
@@ -51,6 +66,24 @@
                                     <input type="submit" class="btn btn-primary" value="Aplicar cambios">
                                 </div>
                             </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Eliminar información</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ¿Estás seguro de querer borrar esta información?
+                        </div>
+                        <div id="mostrarInformación"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger">Eliminar</button>
                         </div>
                     </div>
                 </div>
