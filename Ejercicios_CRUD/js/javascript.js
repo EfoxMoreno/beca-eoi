@@ -41,32 +41,29 @@ axios.get(urlUsers,{headers})
 // Nuevo Ejercicio 22/11/2022
 
 function identificador(idItem) {
-    axios.get(urlUsers,{headers})
+    axios.get(urlUsers+"/"+idItem,{headers})
     .then((respuestaProductos) => {
-        respuestaProductos.data.forEach(item => {
-            if(item.id === idItem){
-                document.getElementById("recipient-id").value = item.id;
-                document.getElementById("recipient-name").value = item.name;
-                document.getElementById("message-text").value = item.description;
-                document.getElementById("recipient-code").value = item.code;
-                
-                // Formulario para modificar articulos
-                const form = document.getElementById('formulario');
-                form.addEventListener('submit', function(element) {
-                    element.preventDefault();
-                    const formData = new FormData(form);
-                    const dataRequest = {
-                        "id":item.id,
-                        "name":item.name,
-                        "description":item.description,
-                        "code":item.code
-                    };
-                    axios.post(urlUsers,dataRequest,{headers})
-                    .then((url) => {
-                        window.location.assign("index.html");
-                    });
-                });
-            }
+
+        document.getElementById("recipient-id").value = respuestaProductos.data.id;
+        document.getElementById("recipient-name").value = respuestaProductos.data.name;
+        document.getElementById("message-text").value = respuestaProductos.data.description;
+        document.getElementById("recipient-code").value = respuestaProductos.data.code;
+        
+        // Formulario para modificar articulos
+        const form = document.getElementById('formulario');
+        form.addEventListener('submit', function(element) {
+            element.preventDefault();
+            const formData = new FormData(form);
+            const dataRequest = {
+                "id":respuestaProductos.data.id,
+                "name":document.getElementById("recipient-name").value,
+                "description":document.getElementById("message-text").value,
+                "code":document.getElementById("recipient-code").value
+            };
+            axios.put(urlUsers+"/"+idItem,dataRequest,{headers})
+            .then((url) => {
+                window.location.assign("index.html");
+            });
         });
     });
 }
