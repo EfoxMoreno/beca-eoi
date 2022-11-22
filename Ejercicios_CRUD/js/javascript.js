@@ -79,7 +79,7 @@ function editarObjeto(idItem) {
 }
 
 function eliminarObjeto(idItem){    
-    axios.delete(urlUsers+"/"+idItem,dataRequest,{headers})
+    axios.delete(urlUsers+"/"+idItem,{headers})
     .then((respuesta) => {
         console.log(respuesta.data);
         window.location.assign("index.html");
