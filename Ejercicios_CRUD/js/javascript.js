@@ -94,29 +94,19 @@ function eliminarObjeto(){
     });
 }
 
-
-// Ejercicio POST
 function postObjeto(){
-    axios.get(urlUsers,{headers})
-    .then((respuestaProductos) => {
-        // Formulario para modificar articulos
-        const form = document.getElementById('formularioPost');
-        form.addEventListener('submit', function(element) {
-            element.preventDefault();
-            const dataRequest = {
-                "id":document.getElementById("post-id").value,
-                "name":document.getElementById("post-name").value,
-                "description":document.getElementById("post-text").value,
-                "code":document.getElementById("post-code").value
-            };
-            axios.post(urlUsers,dataRequest,{headers})
-            .then((url) => {
-                window.location.assign("index.html");
-            });
+    const form = document.getElementById('formularioPost');
+    form.addEventListener('submit', function(element) {
+        element.preventDefault();
+
+        const dataRequest = {
+            "name":document.getElementById("post-name").value,
+            "description":document.getElementById("post-text").value,
+            "code":document.getElementById("post-code").value
+        };
+        axios.post(urlUsers,dataRequest,{headers})
+        .then(() => {
+            window.location.assign("index.html");
         });
-    })
-    .catch((error)=>{
-        console.log(error);
-        document.getElementById("mostrarInformación").innerHTML = error;
-    });
+    }, false);
 }
