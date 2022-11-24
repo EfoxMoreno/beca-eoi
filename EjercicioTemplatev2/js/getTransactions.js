@@ -101,10 +101,10 @@ function editarObjeto(idItem) {
             const dataRequest = {
                 "id":respuestaTransactions.data.id,
                 "type":document.getElementById("transaction-type").value,
-                "total":respuestaTransactions.data.total,
-                "done":respuestaTransactions.data.done,
+                "total":document.getElementById("transaction-total").value,
+                "done":document.getElementById("transaction-done").value,
                 "productCode":document.getElementById("transaction-code").value,
-                "goal":respuestaTransactions.data.goal,
+                "goal":document.getElementById("transaction-goal").value,
                 "assignedTo":document.getElementById("transaction-assignedTo").value
             };
             axios.put(urlTransactions+"/"+idItem,dataRequest,{headers})
