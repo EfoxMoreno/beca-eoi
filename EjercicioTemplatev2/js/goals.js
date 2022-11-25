@@ -61,7 +61,7 @@ form.addEventListener('submit', function(element) {
             "goals": goalID
         };
 
-        axios.put(urlMilestone+"/"+selectorMilestone.value,dataMilestoneRequest,{headers})
+        axios.put(urlMilestone+"/"+idMilestone,dataMilestoneRequest,{headers})
         .then((respuesta) => {
             console.log(respuesta.data);
         });
