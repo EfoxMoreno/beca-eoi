@@ -44,33 +44,27 @@ form.addEventListener('submit', function(element) {
     };
 
     let idMilestone = parseInt(selectorMilestone.value);
-
     let goalID = [];
+
     axios.get(urlMilestone+"/"+idMilestone+"/goals",{headers})
     .then((respuestaMilestone) => {        
         respuestaMilestone.data.goals.forEach(data => {
             goalID.push(data.id);
         });
-
-        arrayGoals = respuestaMilestone.data.goals;
-        arrayGoals.push(dataRequest);
-
-        const dataMilestoneRequest = {
-            "id":idMilestone,
-            "goals": arrayGoals
-        };
-        /*
-        for(let x = 0; x < arrayGoals.length; x++){
-            console.log(arrayGoals[x]);
-        }*/
-    });
+    }); 
 
     axios.post(urlGoals,dataRequest,{headers})
-    .then(() => {
-        window.location.assign("../goals.html");
-    })
-    .catch((error) => {
-        console.log(error);
-    });
+    .then((response) => {
+        goalID.push(response.data);        
+        const dataMilestoneRequest = {
+            "id":idMilestone,
+            "goals": goalID
+        };
 
+        axios.put(urlMilestone+"/"+selectorMilestone.value,dataMilestoneRequest,{headers})
+        .then((respuesta) => {
+            console.log(respuesta.data);
+        });
+        window.location.assign("../goals.html");
+    });
 }, false);
