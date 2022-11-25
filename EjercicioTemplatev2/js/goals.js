@@ -6,6 +6,8 @@ const headers = {
 const urlGoals = ("http://ligafalm.eu:28100/goals?page=0&size=100");
 const urlUsers = ("http://ligafalm.eu:28100/users?page=0&size=100");
 const urlMilestone = ("http://ligafalm.eu:28100/milestones");
+const urlGoalMilestone = ("http://ligafalm.eu:28100/goals/milestone");
+
 const form = document.getElementById('formularioPost');
 const selectorUser = document.getElementById('selectUser');
 const selectorMilestone = document.getElementById('selectMilestone');
@@ -58,11 +60,11 @@ form.addEventListener('submit', function(element) {
 
         goalID.push(response.data);
         const dataMilestoneRequest = {
-            "id":idMilestone,
+            "idMilestone":idMilestone,
             "goals": goalID
         };
 
-        axios.put(urlMilestone+"/"+idMilestone,dataMilestoneRequest,{headers})
+        axios.put(urlGoalMilestone+"/"+idMilestone,dataMilestoneRequest,{headers})
         .then((respuesta) => {
             console.log(respuesta.data);
         });
