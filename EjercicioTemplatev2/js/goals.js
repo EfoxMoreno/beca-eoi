@@ -55,7 +55,8 @@ form.addEventListener('submit', function(element) {
 
     axios.post(urlGoals,dataRequest,{headers})
     .then((response) => {
-        goalID.push(response.data);        
+
+        goalID.push(response.data);
         const dataMilestoneRequest = {
             "id":idMilestone,
             "goals": goalID
@@ -65,6 +66,7 @@ form.addEventListener('submit', function(element) {
         .then((respuesta) => {
             console.log(respuesta.data);
         });
+        
         window.location.assign("../goals.html");
     });
 }, false);
