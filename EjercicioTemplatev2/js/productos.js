@@ -3,7 +3,7 @@ const headers = {
     'Access-Control-Allow-Origin':'*'
 };
 
-const urlUsers = ("http://ligafalm.eu:28100/products/");
+const urlUsers = ("http://ligafalm.eu:28100/products");
 const form = document.getElementById('formularioPost');
 form.addEventListener('submit', function(element) {
     element.preventDefault();

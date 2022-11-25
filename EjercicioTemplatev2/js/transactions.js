@@ -63,6 +63,7 @@ axios.get(urlProducts,{headers})
                 <option value="${transactionProd.id}">${transactionProd.name}</option>
             `;
         });
+
         formulario += initSel1 + filas1 + finSel1 + initSel2 + filas2 + finSel2 + fin;
         form.innerHTML += formulario;
     });
