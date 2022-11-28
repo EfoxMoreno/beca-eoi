@@ -34,11 +34,9 @@ axios.get(urlMilestone,{headers})
     selectorMilestone.innerHTML += filas;
 });
 
-
 form.addEventListener('submit', function(element) {
     element.preventDefault();
-    let arrayGoals = [];
-
+    //Obtenemos los datos introducidos en el goal
     const dataRequest = {
         "name":document.getElementById("post-name").value,
         "description":document.getElementById("post-description").value,
@@ -48,6 +46,7 @@ form.addEventListener('submit', function(element) {
     let idMilestone = parseInt(selectorMilestone.value);
     let goalID = [];
 
+    //Obtenemos todos los goals del id Milestone seleccionado
     axios.get(urlMilestone+"/"+idMilestone+"/goals",{headers})
     .then((respuestaMilestone) => {        
         respuestaMilestone.data.goals.forEach(data => {
@@ -55,6 +54,7 @@ form.addEventListener('submit', function(element) {
         });
     }); 
 
+    //Posteamos los datos recogidos
     axios.post(urlGoals,dataRequest,{headers})
     .then((response) => {
 
@@ -69,6 +69,6 @@ form.addEventListener('submit', function(element) {
             console.log(respuesta.data);
         });
         
-        window.location.assign("../goals.html");
+        //window.location.assign("../goals.html");
     });
 }, false);
